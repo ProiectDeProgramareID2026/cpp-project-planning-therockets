@@ -1,13 +1,18 @@
 //
 // Created by razva on 5/26/2026.
 //
-#include "Entity.h"
 
 #ifndef CPP_PROJECT_PLANNING_THEROCKETS_ACCOUNT_H
 #define CPP_PROJECT_PLANNING_THEROCKETS_ACCOUNT_H
+
+#include "Entity.h"
+
 #include <string>
 #include <memory>
+
 using namespace std;
+
+class Client;
 
 class Account : public Entity{
 private:

@@ -8,4 +8,6 @@ add_executable(cpp_project_planning_therockets main.cpp
         src/Entity.cpp
         src/Account.cpp
         include/Account.h
+        src/Client.cpp
+        include/Client.h
 )

@@ -3,8 +3,11 @@
 //
 
 #include "../include/Account.h"
+#include "../include/Client.h"
 
 #include <string>
+
+using namespace std;
 
 Account::Account(weak_ptr<Client> owner, string IBAN, string currency, double balance)
     : Entity(){
@@ -23,6 +26,9 @@ void Account::addFunds(double ammount){
     balance += ammount;
 }
 void Account::withdrawFunds(double ammount){
+    if (ammount > balance) {
+        throw runtime_error("Fonduri insuficiente");
+    }
     balance -= ammount;
 }
 
