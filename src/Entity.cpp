@@ -11,6 +11,6 @@ int Entity::getId() const {
     return id;
 }
 
-string Entity::toString() {
+string Entity::toString() const {
     return to_string(id);
 }

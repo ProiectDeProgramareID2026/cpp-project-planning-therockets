@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(cpp_project_planning_therockets main.cpp
         include/Entity.h
         src/Entity.cpp
+        src/Account.cpp
+        include/Account.h
 )

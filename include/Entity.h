@@ -16,8 +16,8 @@ public:
     virtual ~Entity() = default;
     int getId() const;
 
-    virtual string toString();
-    virtual string toFileEntry() = 0;
+    virtual string toString() const;
+    virtual string toFileEntry() const = 0;
 };
 
 
