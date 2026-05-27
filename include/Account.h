@@ -27,8 +27,8 @@ public:
     double getBalance() const;
     string getCurrency() const;
 
-    void addFunds(double ammount);
-    void withdrawFunds(double ammount);
+    void addFunds(double amount);
+    void withdrawFunds(double amount);
 
     virtual string toString() const override;
     virtual string toFileEntry() const = 0;

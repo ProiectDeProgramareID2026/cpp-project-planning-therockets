@@ -22,13 +22,19 @@ string Account::getIBAN() const {return IBAN;}
 double Account::getBalance() const {return balance;}
 string Account::getCurrency() const {return currency;}
 
-void Account::addFunds(double ammount){
-    balance += ammount;
+void Account::addFunds(double amount){
+    if (amount < 0) {
+        throw runtime_error("Suma introdusa nu poate fi negativa!");
+    }
+    balance += amount;
 }
-void Account::withdrawFunds(double ammount){
-    if (ammount > balance) {
+void Account::withdrawFunds(double amount){
+    if (amount < 0) {
+        throw runtime_error("Suma introdusa nu poate fi negativa!");
+    }
+    if (amount > balance) {
         throw runtime_error("Fonduri insuficiente");
     }
-    balance -= ammount;
+    balance -= amount;
 }
 
